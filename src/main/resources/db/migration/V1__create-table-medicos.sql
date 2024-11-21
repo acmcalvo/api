@@ -1,14 +1,17 @@
-CREATE TABLE medicos (
-    id BIGINT NOT NULL AUTO_INCREMENT,
-    nombre VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    documento VARCHAR(20) NOT NULL UNIQUE,  -- Increased size for flexibility
-    especialidad VARCHAR(100) NOT NULL,
-    calle VARCHAR(100) NOT NULL,
-    distrito VARCHAR(100) NOT NULL,
-    complemento VARCHAR(100),
-    numero VARCHAR(20),
-    ciudad VARCHAR(100) NOT NULL,
-    activo TINYINT(1) NOT NULL DEFAULT 1,   -- Adding the 'activo' field (1 = true, 0 = false)
-    PRIMARY KEY (id)
+
+create table medicos(
+
+    id bigint not null auto_increment,
+    nombre varchar(100) not null,
+    email varchar(100) not null unique,
+    documento varchar(6) not null unique,
+    especialidad varchar(100) not null,
+    calle varchar(100) not null,
+    distrito varchar(100) not null,
+    complemento varchar(100),
+    numero varchar(20),
+    ciudad varchar(100) not null,
+
+    primary key(id)
+
 );
