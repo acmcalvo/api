@@ -40,6 +40,7 @@ public class MedicoController {
                         medico.getDireccion().getComplemento()));
 
         URI url = uriComponentsBuilder.path("/medicos/{id}").buildAndExpand(medico.getId()).toUri();
+
         return ResponseEntity.created(url).body(datosRespuestaMedico);
 
     }
